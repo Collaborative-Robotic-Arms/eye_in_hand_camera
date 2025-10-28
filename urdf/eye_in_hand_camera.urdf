@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="eye_in_hand_camera">
+  <link
+    name="camera_fixation">
+    <inertial>
+      <origin
+        xyz="-5.43071216944219E-07 0.0610175397843626 0.0278321654677833"
+        rpy="0 0 0" />
+      <mass
+        value="0.111512757258877" />
+      <inertia
+        ixx="0.000186503471337719"
+        ixy="-1.69626348304093E-08"
+        ixz="4.24161109771058E-10"
+        iyy="8.30008082027743E-05"
+        iyz="-4.486315676084E-05"
+        izz="0.000159890419329594" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eye_in_hand_camera/meshes/camera_fixation.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eye_in_hand_camera/meshes/camera_fixation.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="-0.000214789208294226 -0.00859653380921056 -0.0127088225414887"
+        rpy="0 0 0" />
+      <mass
+        value="0.00526823039045375" />
+      <inertia
+        ixx="3.61325460574644E-07"
+        ixy="-8.42039670403038E-10"
+        ixz="-1.32258782224661E-10"
+        iyy="1.72552909734866E-07"
+        iyz="2.49313101261162E-10"
+        izz="5.16628342181524E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eye_in_hand_camera/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eye_in_hand_camera/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_mount"
+    type="fixed">
+    <origin
+      xyz="0.00025 0.09397 0.06673"
+      rpy="0 0 0" />
+    <parent
+      link="camera_fixation" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
